@@ -32,7 +32,7 @@ public class KppoSpravochnik extends Page {
 //	private String filterInput = table_loc + "/div[1]/table/tbody/tr[2]/th/div/table/tbody/tr/td/table/tbody/tr/td[3]/input";
 	
 	//Все фильтры с текстовым полем и датой
-	private String filterInput = table_loc + "//div[contains(@class, 'fakepaging-header')]//th//input[contains(@class, 'textbox') OR contains(@class, 'datebox')]";
+	private String filterInput = table_loc + "//div[contains(@class, 'fakepaging-header')]//th//input[contains(@class, 'textbox') or contains(@class, 'datebox')]";
 	
 //	private String filterCodeInputField = table_loc + "/div[1]/table/tbody/tr[2]/th[2]/div/table/tbody/tr/td/table/tbody/tr/td[3]/input";
 	private String filterCodeInputField = table_loc + "//div[contains(@class, 'fakepaging-header')]//th[2]//input";

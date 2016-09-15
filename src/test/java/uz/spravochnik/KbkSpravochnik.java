@@ -31,7 +31,7 @@ public class KbkSpravochnik extends Page {
 	private String table_loc = ".//div[contains(., 'Цепочки КБК')]";/*.//th[contains(.,'Цепочка КБК')]/../../../../../../../../..*/
 	
 	//Все фильтры с текстовым полем и датой
-	private String filterInput = table_loc + "//div[contains(@class, 'fakepaging-header')]//th//input[contains(@class, 'textbox') OR contains(@class, 'datebox')]";
+	private String filterInput = table_loc + "//div[contains(@class, 'fakepaging-header')]//th//input[contains(@class, 'textbox') or contains(@class, 'datebox')]";
 	
 	private String filterVisible = table_loc + "//img[@title='Видимость фильтров']";
 	private String rows_loc = table_loc + "//div[3]/table/tbody[contains(@id, 'rows')]/tr";
@@ -144,7 +144,7 @@ public class KbkSpravochnik extends Page {
   }
   
   public void select(String val){
-	  //clearFilter();
+	  clearFilter();
 	  
 	  Logger.info("Выбрать в справочнике значение '"+val+"'");
 	  try {
@@ -158,16 +158,17 @@ public class KbkSpravochnik extends Page {
 	  int max = 0;
 	  String row_val = null;
 	  cur = getCurPage();
-	  max = getMaxPage();
+	  max = 10;
+//	  max = getMaxPage();
 	  for(int i = cur;i <= max;i++){
 		  wait.until(ExpectedConditions.elementToBeClickable(By.xpath(rows_loc)));
 		  list  = driver.findElements(By.xpath(rows_loc));
 		  for (Iterator<WebElement> iterator = list.iterator(); iterator.hasNext();) {
 			WebElement row = (WebElement) iterator.next();
 			wait.until(ExpectedConditions.refreshed(ExpectedConditions.elementToBeClickable(row)));
-			row_val = row.findElement(By.xpath("./td[3]/div")).getText();
+			row_val = row.findElement(By.xpath(".//td[3]/div")).getText();
 			if(row_val.equals(val)){
-				row.findElement(By.xpath("./td[1]/div")).click();//".//td[1]/div/span"
+				row.findElement(By.xpath(".//td[3]/div")).click();//".//td[1]/div/span"
 				my_generic_wait_for_page_load();
 				clickOk();
 				return;

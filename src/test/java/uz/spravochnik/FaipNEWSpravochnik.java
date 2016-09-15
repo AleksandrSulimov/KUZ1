@@ -23,11 +23,11 @@ public class FaipNEWSpravochnik extends Page {
 	private String table_loc = ".//div[contains(., 'Выбор записи из справочника')]";
 	
 	//Все фильтры с текстовым полем и датой
-	private String filterInput = table_loc + "//div[contains(@class, 'fakepaging-header')]//th//input[contains(@class, 'textbox') OR contains(@class, 'datebox')]";
+	private String filterInput = table_loc + "//div[contains(@class, 'fakepaging-header')]//th//input[contains(@class, 'textbox') or contains(@class, 'datebox')]";
 	
 	
 	//Все фильтры с текстовым полем и датой
-	private String filterList = table_loc + "//div[contains(@class, 'fakepaging-header')]//th//input[contains(@class, 'textbox') OR contains(@class, 'datebox')]";
+	private String filterList = table_loc + "//div[contains(@class, 'fakepaging-header')]//th//input[contains(@class, 'textbox') or contains(@class, 'datebox')]";
 	
 	private String filterCodeInputField = table_loc + "//div[contains(@class, 'fakepaging-header')]//th[3]//input";
 	private String filterVisible = table_loc + "//img[@title='Видимость фильтров']";

@@ -22,7 +22,7 @@ public class Periodicity extends Page {
 	private String table_loc = window + "//th[contains(.,'Периодичность')]/../../../../..";
 	
 	//Все фильтры с текстовым полем и датой
-	private String filterInput = table_loc + "//div[contains(@class, 'fakepaging-header')]//th//input[contains(@class, 'textbox') OR contains(@class, 'datebox')]";
+	private String filterInput = table_loc + "//div[contains(@class, 'fakepaging-header')]//th//input[contains(@class, 'textbox') or contains(@class, 'datebox')]";
 	
 	private String filterVisible = table_loc + "//img[@title='Видимость фильтров']";
 	
