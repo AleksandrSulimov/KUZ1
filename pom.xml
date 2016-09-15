@@ -155,7 +155,7 @@
     <profile>
       <id>localhost</id>
       <properties>
-        <site.url>http://is3-ssow.lanit.ru:7777/udu-webcenter/faces/</site.url>
+        <site.url>${bamboo.siteURL}</site.url>
       </properties>
       <activation>
         <activeByDefault>true</activeByDefault>
@@ -164,19 +164,19 @@
     <profile>
       <id>devhost</id>
       <properties>
-        <site.url>http://is3-ssow.lanit.ru:7777/udu-webcenter/faces/</site.url>
+        <site.url>${bamboo.siteURL}</site.url>
       </properties>
     </profile>
     <profile>
       <id>testhost</id>
       <properties>
-        <site.url>http://is3-ssow.lanit.ru:7777/udu-webcenter/faces/</site.url>
+        <site.url>${bamboo.siteURL}</site.url>
       </properties>
     </profile>
     <profile>
       <id>prodhost</id>
       <properties>
-        <site.url>http://is3-ssow.lanit.ru:7777/udu-webcenter/faces/</site.url>
+        <site.url>${bamboo.siteURL}</site.url>
       </properties>
     </profile>
     <!-- grid -->
