@@ -44,7 +44,7 @@ public class OkpdSpravochnik extends Page {
 	//фильтр
 	private String table_loc = window + "//th[contains(.,'Наименование')]/../../../../..";
 	private String filterInput = table_loc + "/div[1]/table/tbody/tr[2]/th/div/table/tbody/tr/td/table/tbody/tr/td[3]/input";
-	private String filterVisible = table_loc + "/div[1]/table/tbody/tr[1]/th[1]/div/table/tbody/tr/td/table/tbody/tr/td/img";
+	private String filterVisible = table_loc + "//img[@title='Видимость фильтров']";
 	
 	private String leftElementRowNew = leftBlock + "//div[span[contains(.,'%1$s')]]";
 	private String leftElementExpandNew = "/span[@class='z-tree-icon']";

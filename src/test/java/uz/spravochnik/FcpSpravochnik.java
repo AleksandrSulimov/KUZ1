@@ -34,7 +34,7 @@ public class FcpSpravochnik extends Page {
 	private String filterInput = table_loc + "//div[contains(@class, 'fakepaging-header')]//th//input[contains(@class, 'textbox') OR contains(@class, 'datebox')]";
 	
 	private String filterCodeInputField = table_loc + "/div[1]/table/tbody/tr[2]/th[2]/div/table/tbody/tr/td/table/tbody/tr/td[3]/input";
-	private String filterVisible = table_loc + "/div[1]/table/tbody/tr[1]/th[1]/div/table/tbody/tr/td/table/tbody/tr/td/img";
+	private String filterVisible = table_loc + "//img[@title='Видимость фильтров']";
 	private String rows_loc = table_loc+"/div[3]/table/tbody[not(contains(@class, 'emptybody'))]/tr";
 	private String select_loc = rows_loc+"/td[1]/div/span";
 	private String select_frst_loc = table_loc + "/div[3]/table/tbody/tr[1]/td[1]/div/span";

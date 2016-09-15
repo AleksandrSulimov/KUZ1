@@ -24,7 +24,7 @@ public class Periodicity extends Page {
 	//Все фильтры с текстовым полем и датой
 	private String filterInput = table_loc + "//div[contains(@class, 'fakepaging-header')]//th//input[contains(@class, 'textbox') OR contains(@class, 'datebox')]";
 	
-	private String filterVisible = table_loc + "/div[1]/table/tbody/tr[1]/th[1]//img";
+	private String filterVisible = table_loc + "//img[@title='Видимость фильтров']";
 	
 	private String rows_loc = table_loc + "/div[3]/table/tbody[not(contains(@class,'emptybody'))]/tr";
 	
