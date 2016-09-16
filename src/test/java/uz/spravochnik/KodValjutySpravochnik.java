@@ -28,19 +28,19 @@ import uz.util.Logger;
  */
 public class KodValjutySpravochnik extends Page {
 	
-	private String table_loc = ".//th[contains(.,'Наименование валюты')]/../../../../..";
+	private String table_loc = ".//div[contains(., 'Справочник валют')]";
 	
 	//Все фильтры с текстовым полем и датой
 	private String filterInput = table_loc + "//div[contains(@class, 'fakepaging-header')]//th//input[contains(@class, 'textbox') or contains(@class, 'datebox')]";
 	
 	private String filterVisible = table_loc + "//img[@title='Видимость фильтров']";
-	private String rows_loc = table_loc+"/div[3]/table/tbody[not(contains(@class, 'emptybody'))]/tr";
-	private String select_loc = rows_loc+"/td[1]/div/span";
-	private String desc_loc = rows_loc+"/td[2]/div";
-	private String navigation_loc = table_loc+"/../../../../div[3]/div[1]/div/div/div/div/div";
-	private String navigationNext_loc = navigation_loc+"/div[6]/div/button";
-	private String navigationCurPage_loc = navigation_loc+"/div[3]/input";//@value
-	private String navigationMaxPage_loc = navigation_loc+"/div[5]/span";//text
+	private String rows_loc = table_loc + "//div[3]/table/tbody[contains(@id, 'rows')]/tr";
+	private String select_loc = rows_loc + "/td[1]/div/span";
+	private String desc_loc = rows_loc + "/td[2]/div";
+	private String navigation_loc = table_loc + "//div[contains(@class, 'fake-panel')]";
+	private String navigationNext_loc = navigation_loc + "/div[6]/div/button";
+	private String navigationCurPage_loc = navigation_loc + "//input";//@value
+	private String navigationMaxPage_loc = navigation_loc + "//div[5]/span";//text
 
 	private String buttonOk = ".//div/button[contains(.,'Отмена')]/preceding-sibling::button[contains(.,'OK')]";
 	
